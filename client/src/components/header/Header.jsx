@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { NavLink } from "react-router-dom";
 
 export default function Header() {
   const [isDarkMode, setIsDarkMode] = useState(
@@ -146,12 +147,13 @@ export default function Header() {
               </a>
             </li>
             <li>
-              <a
+              <NavLink
+                to="/login"
                 href="#"
                 className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
               >
-                Contact
-              </a>
+                Login
+              </NavLink>
             </li>
             <li className="pt-0.5">
               <button
