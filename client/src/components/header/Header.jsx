@@ -1,9 +1,9 @@
-import { useContext, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
-import { AuthContext } from "../../contexts/AuthContext";
+import { useAuthContext } from "../../contexts/AuthContext";
 
 export default function Header() {
-  const { isAuthenticated } = useContext(AuthContext);
+  const { isAuthenticated } = useAuthContext();
 
   const [isDarkMode, setIsDarkMode] = useState(
     () => localStorage.getItem("theme") === "dark"

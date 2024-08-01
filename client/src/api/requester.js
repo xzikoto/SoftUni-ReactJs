@@ -20,6 +20,16 @@ export async function requester(method, url, data) {
     options.body = JSON.stringify(data);
   }
 
+  const accessToken = localStorage.getItem("accessToken");
+  console.log(accessToken);
+
+  if (accessToken) {
+    options.headers = {
+      ...options.headers,
+      "X-Authorization": accessToken,
+    };
+  }
+
   const response = await fetch(url, options);
   const result = response.json();
 
