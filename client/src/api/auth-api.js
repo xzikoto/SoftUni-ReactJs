@@ -6,3 +6,5 @@ export const login = (email, password) =>
 
 export const register = (email, password) =>
   request.post(`${AUTH_URL}/register`, { email, password });
+
+export const logout = () => request.get(`${AUTH_URL}/logout`);
