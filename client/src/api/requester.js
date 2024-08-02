@@ -14,6 +14,7 @@ export async function requester(method, url, data) {
 
   if (data) {
     options.headers = {
+      ...options.headers,
       "Content-Type": "application/json",
     };
 
@@ -21,7 +22,6 @@ export async function requester(method, url, data) {
   }
 
   const accessToken = localStorage.getItem("accessToken");
-  console.log(accessToken);
 
   if (accessToken) {
     options.headers = {
