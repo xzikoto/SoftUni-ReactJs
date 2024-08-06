@@ -1,14 +1,18 @@
-import { useNavigate } from "react-router-dom";
+import { Link, Navigate, useNavigate } from "react-router-dom";
 import { useLogin } from "../../hooks/useAuth";
 import { useForm } from "../../hooks/useForm";
 import MainLogo from "../../common/logos/MainLogo";
 import AppName from "../../common/logos/AppName";
+import { validateLogin } from "../../utils/validationFormUtils";
+import { useContext, useEffect } from "react";
+import { AuthContext } from "../../contexts/AuthContext";
 
 const initialValues = { email: "", password: "" };
 
 export default function Login() {
   const login = useLogin();
   const navigate = useNavigate();
+  const { isAuthenticated } = useContext(AuthContext);
 
   const loginHandler = async ({ email, password }) => {
     try {
@@ -19,11 +23,17 @@ export default function Login() {
     }
   };
 
-  const { values, changeHandler, submitHandler } = useForm(
+  const { values, changeHandler, submitHandler, errors } = useForm(
     initialValues,
-    loginHandler
+    loginHandler,
+    validateLogin
   );
 
+  useEffect(() => {
+    if (isAuthenticated) {
+      navigate("/authenticated");
+    }
+  }, []);
   return (
     <section className="bg-gray-50 dark:bg-gray-900">
       <div className="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
@@ -57,6 +67,9 @@ export default function Login() {
                   value={values.email}
                   onChange={changeHandler}
                 />
+                {errors.email && (
+                  <span className="text-red-500 text-sm">{errors.email}</span>
+                )}
               </div>
               <div>
                 <label
@@ -75,6 +88,11 @@ export default function Login() {
                   value={values.password}
                   onChange={changeHandler}
                 />
+                {errors.password && (
+                  <span className="text-red-500 text-sm">
+                    {errors.password}
+                  </span>
+                )}
               </div>
               <button
                 type="submit"
@@ -84,12 +102,12 @@ export default function Login() {
               </button>
               <p className="text-sm font-light text-gray-700 dark:text-gray-400">
                 Don’t have an account yet?{" "}
-                <a
-                  href="#"
+                <Link
+                  to="/register"
                   className="font-medium text-blue-600 hover:underline dark:text-blue-400"
                 >
                   Sign up
-                </a>
+                </Link>
               </p>
             </form>
           </div>
