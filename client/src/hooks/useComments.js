@@ -1,12 +1,12 @@
 import { useEffect, useState } from "react";
 import commentsAPI from "../api/comments-api";
 
-export function useGetAllcomments() {
+export function useGetAllcomments(blogId) {
   const [comments, setcomments] = useState([]);
 
   const fetchcomments = async () => {
     try {
-      const result = await commentsAPI.getAll();
+      const result = await commentsAPI.getAll(blogId);
       setcomments(result);
     } catch (error) {
       console.error("Failed to fetch comments:", error);
@@ -49,4 +49,10 @@ export function useEditComment() {
   const commentEditHandler = (id, data) => commentsAPI.put(id, data);
 
   return commentEditHandler;
+}
+
+export function useDeleteComment() {
+  const commentCreateHandler = (id) => commentsAPI.del(id);
+
+  return commentCreateHandler;
 }

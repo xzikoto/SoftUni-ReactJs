@@ -1,23 +1,25 @@
-import * as request from "./requester";
+import requester from "./requester";
 import { COMMENTS_ENDPOINT } from "./urls/urls";
 
-export const getAll = async () => {
-  const result = await request.get(COMMENTS_ENDPOINT);
+export const getAll = (blogId) => {
+  const params = new URLSearchParams({
+    where: `postId="${blogId}"`,
+    load: `author=_ownerId:users`,
+    sortBy: `datetime`,
+  });
 
-  const games = Object.values(result);
-
-  return games;
+  return requester.get(`${COMMENTS_ENDPOINT}?${params}`);
 };
 
-export const get = (id) => request.get(`${COMMENTS_ENDPOINT}/${id}`);
+export const get = (id) => requester.get(`${COMMENTS_ENDPOINT}/${id}`);
 
 export const create = (commentData) =>
-  request.post(`${COMMENTS_ENDPOINT}`, commentData);
+  requester.post(`${COMMENTS_ENDPOINT}`, commentData);
 
-export const del = (id) => request.del(`${COMMENTS_ENDPOINT}/${id}`);
+export const del = (id) => requester.del(`${COMMENTS_ENDPOINT}/${id}`);
 
 export const put = (id, commentData) =>
-  request.put(`${COMMENTS_ENDPOINT}/${id}`, commentData);
+  requester.put(`${COMMENTS_ENDPOINT}/${id}`, commentData);
 
 const commentsAPI = {
   getAll,
