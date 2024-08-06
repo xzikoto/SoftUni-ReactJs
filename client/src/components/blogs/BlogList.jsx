@@ -5,6 +5,7 @@ import { useGetAllBlogs } from "../../hooks/useBlogs";
 import { DeleteBlog } from "./delete-blog/DeleteBlog";
 import { useState } from "react";
 import EditBlog from "./edit-blog/EditBlog";
+import { NavLink } from "react-router-dom";
 
 export default function BlogList() {
   const [blogs, fetchBlogs] = useGetAllBlogs();
@@ -53,28 +54,34 @@ export default function BlogList() {
         id={editBlogId}
       />
 
-      <div className="bg-white dark:bg-gray-900 py-24 sm:py-32">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="mx-auto max-w-2xl lg:mx-0">
-            <h2 className="text-3xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-4xl">
-              From the blog
-            </h2>
-            <div className="flex items-center mt-4">
-              <div className="flex-grow pr-4">
-                <p className="text-lg leading-8 text-gray-600 dark:text-gray-400">
-                  Easiest way to grow your audience with our incredible user
-                  experience.
-                </p>
-              </div>
-              <button
-                onClick={() => setOpenCreateModal(true)}
-                className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50"
-              >
-                Create
-              </button>
-            </div>
-          </div>
+      <div className="bg-white dark:bg-gray-900 py-24 sm:py-32 pb-0">
+        <section className="bg-white dark:bg-gray-900">
+          <p className="mb-6 text-xl font-normal text-center text-gray-500 lg:text-2xl sm:px-16 xl:px-48 dark:text-gray-400">
+            Here we want to express what the best devs do!
+          </p>
 
+          <div className="flex flex-col mb-8 lg:mb-16 space-y-4 sm:flex-row sm:justify-center sm:space-y-0 sm:space-x-4">
+            <button
+              onClick={() => setOpenCreateModal(true)}
+              className="text-white inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center rounded-lg transition-transform duration-300 ease-in-out transform bg-gradient-to-r from-create-light-start to-create-light-end hover:scale-105 dark:from-create-dark-start dark:to-create-dark-end focus:outline-none focus:ring-4 focus:ring-purple-300 dark:focus:ring-blue-500"
+            >
+              Create
+              <svg
+                className="ml-2 -mr-1 w-5 h-5"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fillRule="evenodd"
+                  d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                  clipRule="evenodd"
+                ></path>
+              </svg>
+            </button>
+          </div>
+        </section>
+        <div className="mx-auto max-w-7xl px-6 lg:px-8 mt-0">
           <div className="mx-auto mt-10 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 border-t border-gray-200 pt-10 sm:mt-16 sm:pt-16 lg:mx-0 lg:max-w-none lg:grid-cols-3">
             {blogs.length > 0 ? (
               blogs.map((blog) => (
@@ -102,7 +109,7 @@ export default function BlogList() {
                 </p>
                 <button
                   onClick={() => setOpenCreateModal(true)}
-                  className="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-900"
+                  className="text-white font-bold py-2 px-4 rounded-lg transition-transform duration-300 ease-in-out transform bg-gradient-to-r from-purple-500 to-pink-500 hover:scale-105 dark:from-blue-400 dark:to-teal-300 focus:outline-none focus:ring-4 focus:ring-purple-300 dark:focus:ring-blue-500"
                 >
                   Create
                   <svg

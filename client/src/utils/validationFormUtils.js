@@ -40,3 +40,12 @@ export const validateBlog = (values) => {
 
   return errors;
 };
+
+export const validateComment = (values) => {
+  const errors = {};
+  if (!values.text) {
+    errors.date = "Date is required";
+  }
+
+  return errors;
+};

@@ -4,9 +4,9 @@ import { POSTS_ENDPOINT } from "./urls/urls";
 export const getAll = async () => {
   const result = await request.get(POSTS_ENDPOINT);
 
-  const games = Object.values(result);
+  const blogs = Object.values(result);
 
-  return games;
+  return blogs;
 };
 
 export const get = (id) => request.get(`${POSTS_ENDPOINT}/${id}`);
