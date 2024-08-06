@@ -1,106 +1,150 @@
 {
-    "posts": {
-        "-MSbypx-13fHPDyzNRtf": {
-            "body": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perferendis maiores eligendi quos quidem ex numquam hic. Eos quos similique voluptates accusamus quae voluptas magni ad a ipsum, quia enim debitis cumque quibusdam exercitationem architecto sint nostrum dolorum dolor repudiandae nulla deserunt, dolorem itaque!",
-            "id": "-MSbypx-13fHPDyzNRtf",
-            "title": "Unit Testing And Modules"
-        },
-        "-MSbz99qxklK-5rZWGmt": {
-            "body": "Quisquam beatae rerum repudiandae distinctio nesciunt nemo dolorem facilis aspernatur, totam, laudantium sunt amet non, itaque voluptate quae cumque tempore autem similique. Quisquam nemo cupiditate, facere obcaecati iure eveniet illo recusandae! Pariatur magnam commodi, doloremque, beatae unde facilis soluta blanditiis ex debitis quisquam, nostrum voluptates.",
-            "id": "-MSbz99qxklK-5rZWGmt",
-            "title": "REST Services And AJAX"
-        },
-        "-MSbzSdzWBvBHJN7gdRw": {
-            "body": "Nesciunt facere, omnis exercitationem neque quisquam optio quidem distinctio laboriosam libero consequuntur aperiam, id possimus accusamus ad eaque quis quas molestiae. Esse praesentium cumque quae nobis atque eligendi commodi nam dolores, aperiam vero quia quaerat, soluta, maiores molestiae voluptatum. Modi doloribus consequatur explicabo enim, voluptate nostrum amet expedita natus tempore exercitationem nesciunt quasi quidem eaque.",
-            "id": "-MSbzSdzWBvBHJN7gdRw",
-            "title": "Asynchronous Programming"
-        },
-        "-MSbziiMKjPeV03elBfK": {
-            "body": "Aspernatur sapiente atque autem, corrupti accusamus animi dolorem asperiores nobis voluptate iure incidunt impedit ex quasi aliquid inventore molestiae totam vitae ullam beatae pariatur dolor eius provident! Deserunt, explicabo aliquid quasi distinctio quisquam vitae, odit perspiciatis alias, quibusdam sunt obcaecati eveniet. Doloribus minima ad culpa harum aliquid incidunt minus laboriosam perspiciatis natus accusamus corrupti, recusandae maxime ex possimus.",
-            "id": "-MSbziiMKjPeV03elBfK",
-            "title": "Remote Databases"
-        },
-        "-MSbzvqGMJAXR1syO-nz": {
-            "body": "Minima minus iure reiciendis sequi error, impedit facere veritatis architecto accusamus nulla atque temporibus quas quaerat sed harum laudantium culpa placeat consequatur cupiditate officia soluta dolores.Praesentium natus molestiae illo a quisquam omnis corporis harum ipsum iure quam nobis tenetur necessitatibus reprehenderit quas et, ipsa nostrum, dolorem quasi mollitia quo? Doloremque eaque corporis obcaecati reiciendis quidem perferendis repudiandae tempora cupiditate magnam nulla assumenda placeat est vel vitae nesciunt asperiores consectetur, modi dignissimos rem maxime fuga eius.",
-            "id": "-MSbzvqGMJAXR1syO-nz",
-            "title": "Templating"
-        },
-        "-MSc-8DwUmBi8NG52eOH": {
-            "body": "Reiciendis veniam totam natus reprehenderit dolore adipisci consectetur placeat numquam nemo eum minus necessitatibus rem, possimus vitae iusto, fugiat molestiae quos, maiores tenetur cumque illo dicta enim quod exercitationem. Esse, ipsum modi eligendi itaque debitis suscipit asperiores. Delectus maxime tempore, inventore, dolores eum esse nulla quis harum amet tempora, aspernatur blanditiis obcaecati voluptates neque repudiandae sequi dignissimos?",
-            "id": "-MSc-8DwUmBi8NG52eOH",
-            "title": "Routing"
-        }
+  "posts": {
+    "e527d98b-806f-407e-a00e-7f6e7a0ddf76": {
+      "_id": "e527d98b-806f-407e-a00e-7f6e7a0ddf76",
+      "title": "Unit Testing And Modules",
+      "date": "2023-05-12",
+      "category": {
+        "name": "Software Development",
+        "title": "Unit Testing And Modules"
+      },
+      "description": "An in-depth look at unit testing and how to structure modules effectively.",
+      "imageUrl": "https://example.com/images/unit-testing.jpg",
+      "author": {
+        "role": "Senior Developer",
+        "name": "Alice Johnson",
+        "imageUrl": "https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+      },
+      "_ownerId": "60f0cf0b-34b0-4abd-9769-8c42f830dffc"
     },
-    "comments": {
-        "-MSgyQMjBNfYjW2m6r97": {
-            "id": "-MSgyQMjBNfYjW2m6r97",
-            "postId": "-MSbypx-13fHPDyzNRtf",
-            "text": "A very interesting post!"
-        },
-        "-MSgySbWEFw3rhCfIIns": {
-            "id": "-MSgySbWEFw3rhCfIIns",
-            "postId": "-MSbypx-13fHPDyzNRtf",
-            "text": "Unit Testing is a useful testing technique in programming."
-        },
-        "-MSgyUeUxLUNUorksrlq": {
-            "id": "-MSgyUeUxLUNUorksrlq",
-            "postId": "-MSbypx-13fHPDyzNRtf",
-            "text": "Modularization and encapsulation are two very important concepts in software engineering."
-        },
-        "-MSgyWOlRpJq2G2hBqYZ": {
-            "id": "-MSgyWOlRpJq2G2hBqYZ",
-            "postId": "-MSbz99qxklK-5rZWGmt",
-            "text": "AJAX (Asynchronous JavaScript and XML) is a set of tools used to make calls to servers to fetch some data."
-        },
-        "-MSgyY8fK5DetuiWvbbX": {
-            "id": "-MSgyY8fK5DetuiWvbbX",
-            "postId": "-MSbz99qxklK-5rZWGmt",
-            "text": "Thank you! This post is very useful."
-        },
-        "-MSgyZoHC-v0eEdoy31Y": {
-            "id": "-MSgyZoHC-v0eEdoy31Y",
-            "postId": "-MSbzSdzWBvBHJN7gdRw",
-            "text": "I have learned a lot from this post."
-        },
-        "-MSgyacRSWOAMXra4lZ_": {
-            "id": "-MSgyacRSWOAMXra4lZ_",
-            "postId": "-MSbzSdzWBvBHJN7gdRw",
-            "text": "Most of the concepts are explained clearly in the post. Thank you!"
-        },
-        "-MSgycIUgNg2qojbj7e1": {
-            "id": "-MSgycIUgNg2qojbj7e1",
-            "postId": "-MSbziiMKjPeV03elBfK",
-            "text": "This is one of the best posts about Remote Databases I have read recently."
-        },
-        "-MSgydt2l0elQZ2vWXtL": {
-            "id": "-MSgydt2l0elQZ2vWXtL",
-            "postId": "-MSbziiMKjPeV03elBfK",
-            "text": "Great content!"
-        },
-        "-MSgyg1jo4ZATbbeLtCF": {
-            "id": "-MSgyg1jo4ZATbbeLtCF",
-            "postId": "-MSbziiMKjPeV03elBfK",
-            "text": "A nice overview of what 'Remote Databases' are."
-        },
-        "-MSgyhugLG4gmph9qIGB": {
-            "id": "-MSgyhugLG4gmph9qIGB",
-            "postId": "-MSbzvqGMJAXR1syO-nz",
-            "text": "This is the best post I have ever read about 'Templating'!"
-        },
-        "-MSgyl1Umh0tKd3ISkJt": {
-            "id": "-MSgyl1Umh0tKd3ISkJt",
-            "postId": "-MSbzvqGMJAXR1syO-nz",
-            "text": "Overall, the article is great."
-        },
-        "-MSgymXYyAU71cDX6-eK": {
-            "id": "-MSgymXYyAU71cDX6-eK",
-            "postId": "-MSc-8DwUmBi8NG52eOH",
-            "text": "This post helped me learn more about 'Routing'."
-        },
-        "-MSgyo88wO16izQZCVjh": {
-            "id": "-MSgyo88wO16izQZCVjh",
-            "postId": "-MSc-8DwUmBi8NG52eOH",
-            "text": "I would like to read more articles about 'Routing' like this one."
-        }
+    "0f090753-78be-4348-9c6f-a8bcdaf919a2": {
+      "_id": "0f090753-78be-4348-9c6f-a8bcdaf919a2",
+      "title": "REST Services And AJAX",
+      "date": "2023-06-18",
+      "category": {
+        "name": "Web Development",
+        "title": "REST Services And AJAX"
+      },
+      "description": "Understanding REST services and how to use AJAX for dynamic web applications.",
+      "imageUrl": "https://example.com/images/rest-ajax.jpg",
+      "author": {
+        "role": "Web Developer",
+        "name": "Bob Smith",
+        "imageUrl": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+      },
+      "_ownerId": "60f0cf0b-34b0-4abd-9769-8c42f830dffc"
+    },
+    "2e5e9168-afb8-40c4-b176-bb126034d8a5": {
+      "_id": "2e5e9168-afb8-40c4-b176-bb126034d8a5",
+      "title": "Asynchronous Programming",
+      "date": "2023-07-04",
+      "category": {
+        "name": "Programming",
+        "title": "Asynchronous Programming"
+      },
+      "description": "A comprehensive guide to asynchronous programming techniques.",
+      "imageUrl": "https://example.com/images/async-programming.jpg",
+      "author": {
+        "role": "Backend Developer",
+        "name": "Charlie Brown",
+        "imageUrl": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+      },
+      "_ownerId": "60f0cf0b-34b0-4abd-9769-8c42f830dffc"
+    },
+    "900b0eb1-cc89-4adf-a32d-c865c6de5d6b": {
+      "_id": "900b0eb1-cc89-4adf-a32d-c865c6de5d6b",
+      "title": "Remote Databases",
+      "date": "2023-08-20",
+      "category": {
+        "name": "Database Management",
+        "title": "Remote Databases"
+      },
+      "description": "Exploring the intricacies of managing and using remote databases effectively.",
+      "imageUrl": "https://example.com/images/remote-databases.jpg",
+      "author": {
+        "role": "Database Administrator",
+        "name": "Diana Green",
+        "imageUrl": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+      },
+      "_ownerId": "60f0cf0b-34b0-4abd-9769-8c42f830dffc"
+    },
+    "34dbce86-e6eb-410b-83be-cea51d513e58": {
+      "_id": "34dbce86-e6eb-410b-83be-cea51d513e58",
+      "title": "Templating",
+      "date": "2023-09-14",
+      "category": {
+        "name": "Frontend Development",
+        "title": "Templating"
+      },
+      "description": "An overview of templating in modern web development and its best practices.",
+      "imageUrl": "https://example.com/images/templating.jpg",
+      "author": {
+        "role": "Frontend Developer",
+        "name": "Eve White",
+        "imageUrl": "https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+      },
+      "_ownerId": "60f0cf0b-34b0-4abd-9769-8c42f830dffc"
+    },
+    "6655d73c-23d6-4b98-b985-f63210f88a75": {
+      "_id": "6655d73c-23d6-4b98-b985-f63210f88a75",
+      "title": "Routing",
+      "date": "2023-10-05",
+      "category": {
+        "name": "Web Development",
+        "title": "Routing"
+      },
+      "description": "A detailed exploration of routing mechanisms in modern web frameworks.",
+      "imageUrl": "https://example.com/images/routing.jpg",
+      "author": {
+        "role": "Full Stack Developer",
+        "name": "Frank Black",
+        "imageUrl": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+      },
+      "_ownerId": "60f0cf0b-34b0-4abd-9769-8c42f830dffc"
     }
+  },
+  "comments": {
+    "e527d98b-806f-407e-a00e-7f6e7a0ddf76": {
+      "_id": "e527d98b-806f-407e-a00e-7f6e7a0ddf76",
+      "postId": "6655d73c-23d6-4b98-b985-f63210f88a75",
+      "text": "A very interesting post!",
+      "_ownerId": "35c62d76-8152-4626-8712-eeb96381bea8",
+      "datetime": "2024-08-06T10:00:00Z"
+    },
+    "0f090753-78be-4348-9c6f-a8bcdaf919a2": {
+      "_id": "0f090753-78be-4348-9c6f-a8bcdaf919a2",
+      "postId": "6655d73c-23d6-4b98-b985-f63210f88a75",
+      "text": "Unit Testing is a useful testing technique in programming.",
+      "_ownerId": "847ec027-f659-4086-8032-5173e2f9c93a",
+      "datetime": "2024-08-06T10:05:00Z"
+    },
+    "2e5e9168-afb8-40c4-b176-bb126034d8a5": {
+      "_id": "2e5e9168-afb8-40c4-b176-bb126034d8a5",
+      "postId": "34dbce86-e6eb-410b-83be-cea51d513e58",
+      "text": "Modularization and encapsulation are two very important concepts in software engineering.",
+      "_ownerId": "60f0cf0b-34b0-4abd-9769-8c42f830dffc",
+      "datetime": "2024-08-06T10:10:00Z"
+    },
+    "900b0eb1-cc89-4adf-a32d-c865c6de5d6b": {
+      "_id": "900b0eb1-cc89-4adf-a32d-c865c6de5d6b",
+      "postId": "34dbce86-e6eb-410b-83be-cea51d513e58",
+      "text": "AJAX (Asynchronous JavaScript and XML) is a set of tools used to make calls to servers to fetch some data.",
+      "_ownerId": "60f0cf0b-34b0-4abd-9769-8c42f830dffc",
+      "datetime": "2024-08-06T10:15:00Z"
+    },
+    "34dbce86-e6eb-410b-83be-cea51d513e58": {
+      "_id": "34dbce86-e6eb-410b-83be-cea51d513e58",
+      "postId": "900b0eb1-cc89-4adf-a32d-c865c6de5d6b",
+      "text": "Thank you! This post is very useful.",
+      "_ownerId": "60f0cf0b-34b0-4abd-9769-8c42f830dffc",
+      "datetime": "2024-08-06T10:20:00Z"
+    },
+    "6655d73c-23d6-4b98-b985-f63210f88a75": {
+      "_id": "6655d73c-23d6-4b98-b985-f63210f88a75",
+      "postId": "900b0eb1-cc89-4adf-a32d-c865c6de5d6b",
+      "text": "Most of the concepts are explained clearly in the post. Thank you!",
+      "_ownerId": "60f0cf0b-34b0-4abd-9769-8c42f830dffc",
+      "datetime": "2024-08-06T10:25:00Z"
+    }
+  }
 }
