@@ -114,8 +114,8 @@ export default function Header() {
                 Pricing
               </NavLink>
             </li>
-            <li>
-              {isAuthenticated ? (
+            {isAuthenticated ? (
+              <li>
                 <NavLink
                   to="/logout"
                   className={({ isActive }) =>
@@ -128,21 +128,40 @@ export default function Header() {
                 >
                   Logout
                 </NavLink>
-              ) : (
-                <NavLink
-                  to="/login"
-                  className={({ isActive }) =>
-                    `block py-2 px-3 rounded md:bg-transparent md:p-0 ${
-                      isActive
-                        ? "text-blue-700 md:text-blue-700 dark:text-white"
-                        : "text-gray-900 dark:text-gray-300 hover:text-blue-700 dark:hover:text-white"
-                    }`
-                  }
-                >
-                  Login
-                </NavLink>
-              )}
-            </li>
+              </li>
+            ) : (
+              <>
+                <li>
+                  <NavLink
+                    to="/login"
+                    className={({ isActive }) =>
+                      `block py-2 px-3 rounded md:bg-transparent md:p-0 ${
+                        isActive
+                          ? "text-blue-700 md:text-blue-700 dark:text-white"
+                          : "text-gray-900 dark:text-gray-300 hover:text-blue-700 dark:hover:text-white"
+                      }`
+                    }
+                  >
+                    Login
+                  </NavLink>
+                </li>
+                <li>
+                  <NavLink
+                    to="/register"
+                    className={({ isActive }) =>
+                      `block py-2 px-3 rounded md:bg-transparent md:p-0 ${
+                        isActive
+                          ? "text-blue-700 md:text-blue-700 dark:text-white"
+                          : "text-gray-900 dark:text-gray-300 hover:text-blue-700 dark:hover:text-white"
+                      }`
+                    }
+                  >
+                    Register
+                  </NavLink>
+                </li>
+              </>
+            )}
+
             <li className="pt-0.5">
               <button
                 onClick={toggleTheme}
