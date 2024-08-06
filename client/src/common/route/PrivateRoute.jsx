@@ -5,7 +5,7 @@ import { AuthContext } from "../../contexts/AuthContext";
 const PrivateRoute = () => {
   const { isAuthenticated } = useContext(AuthContext);
 
-  return isAuthenticated ? <Outlet /> : <Navigate to="/login" />;
+  return isAuthenticated ? <Outlet /> : <Navigate to="/not-authenticated" />;
 };
 
 export default PrivateRoute;
