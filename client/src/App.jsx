@@ -11,6 +11,7 @@ import Logout from "./components/logout/Logout";
 import "flowbite/dist/flowbite.css";
 import BlogList from "./components/blogs/BlogList";
 import DetailsBlog from "./components/blogs/details-blog/DetailsBlog";
+import PrivateRoute from "./common/route/PrivateRoute";
 
 function App() {
   return (
@@ -22,7 +23,9 @@ function App() {
         <Route path="/register" element={<Register />} />
         <Route path="/logout" element={<Logout />} />
         <Route path="/blogs" element={<BlogList />} />
-        <Route path="/blogs/:blogId/details" element={<DetailsBlog />} />
+        <Route element={<PrivateRoute />}>
+          <Route path="/blogs/:blogId/details" element={<DetailsBlog />} />
+        </Route>
       </Routes>
     </AuthContextProvider>
   );

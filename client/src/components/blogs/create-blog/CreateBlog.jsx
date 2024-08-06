@@ -42,7 +42,7 @@ export default function CreateBlog({ show, onClose }) {
 
   return (
     <Modal show={show} onClose={onClose}>
-      <Modal.Header>Create a New Blog</Modal.Header>
+      <Modal.Header>Create a New Gossip</Modal.Header>
       <Modal.Body>
         <form onSubmit={submitHandler} className="space-y-6">
           <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
@@ -243,13 +243,13 @@ export default function CreateBlog({ show, onClose }) {
           <div className="flex justify-center mt-4 gap-2">
             <Button
               type="submit"
-              className="bg-blue-600 text-white hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-blue-500 dark:hover:bg-blue-600 dark:focus:ring-blue-400 rounded-lg px-4 py-2 text-sm font-medium transition-colors duration-300"
+              className="bg-blue-600 text-white focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-blue-500 dark:focus:ring-blue-400 rounded-lg px-4 py-2 text-sm font-medium transition-colors duration-300"
             >
               Create
             </Button>
             <Button
               onClick={onClose}
-              className="bg-gray-700 text-white hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-300 dark:bg-gray-600 dark:text-gray-200 dark:hover:bg-gray-500 dark:focus:ring-gray-400 rounded-lg px-4 py-2 text-sm font-medium transition-colors duration-300"
+              className="bg-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-gray-300 dark:bg-gray-600 dark:text-gray-200 dark:focus:ring-gray-400 rounded-lg px-4 py-2 text-sm font-medium transition-colors duration-300"
             >
               Cancel
             </Button>

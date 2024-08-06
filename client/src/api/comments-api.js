@@ -5,10 +5,9 @@ export const getAll = (blogId) => {
   const params = new URLSearchParams({
     where: `postId="${blogId}"`,
     load: `author=_ownerId:users`,
-    sortBy: `datetime`,
   });
 
-  return requester.get(`${COMMENTS_ENDPOINT}?${params}`);
+  return requester.get(`${COMMENTS_ENDPOINT}?${params}&sortBy=datetime%20desc`);
 };
 
 export const get = (id) => requester.get(`${COMMENTS_ENDPOINT}/${id}`);
