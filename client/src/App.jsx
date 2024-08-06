@@ -8,6 +8,10 @@ import Login from "./components/login/Login";
 import Register from "./components/register/Register";
 import Logout from "./components/logout/Logout";
 
+import "flowbite/dist/flowbite.css";
+import BlogList from "./components/blogs/BlogList";
+import DetailsBlog from "./components/blogs/details-blog/DetailsBlog";
+
 function App() {
   return (
     <AuthContextProvider>
@@ -17,6 +21,8 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
         <Route path="/logout" element={<Logout />} />
+        <Route path="/blogs" element={<BlogList />} />
+        <Route path="/blogs/:blogId/details" element={<DetailsBlog />} />
       </Routes>
     </AuthContextProvider>
   );
