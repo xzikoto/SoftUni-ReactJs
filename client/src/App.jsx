@@ -17,7 +17,6 @@ import Authenticated from "./common/not-authorized/Authenticated";
 import Logout from "./components/logout/Logout";
 import Contact from "./components/contact/Contact";
 import LatestCommentsList from "./components/comments/latest-comments/LatestCommentsList";
-import LatestCommentsListItem from "./components/comments/latest-comments/latest-comments-list-item/LatestCommentsListItem";
 import DetailsLatestCommentListItem from "./components/comments/latest-comments/latest-comments-list-item/DetailsLatestCommentListItem";
 
 function App() {
