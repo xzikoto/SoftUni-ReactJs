@@ -43,4 +43,9 @@ git clone [[https://github.com/yourusername/your-repository.git](https://github.
 - email: admin@abv.bg
 - password: admin
 
+
+## Architecture
+- Client App (client folder)
+- Server App (server folder)
+
 Enjoy, if you have any questions, send a email form request from the Contact page :)
