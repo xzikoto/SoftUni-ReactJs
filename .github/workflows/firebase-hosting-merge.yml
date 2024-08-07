@@ -21,3 +21,4 @@ jobs:
           firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_REACTJS_PROJECT_SOFTUNI }}
           channelId: live
           projectId: reactjs-project-softuni
+          entryPoint: client
