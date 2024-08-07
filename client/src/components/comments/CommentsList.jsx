@@ -98,9 +98,9 @@ export default function CommentsList() {
         show={openEditModal}
         onClose={() => {
           setOpenEditModal(false);
-          setEditCommentId(null); // Clear the editCommentId when closing
+          setEditCommentId(null); 
         }}
-        id={editCommentId} // Pass the editCommentId to the modal
+        id={editCommentId}
         onSubmit={handleSubmitEdit}
       />
       <section className="bg-white dark:bg-gray-900 py-8 lg:py-16 antialiased">

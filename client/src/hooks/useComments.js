@@ -21,7 +21,7 @@ export function useGetAllcomments(blogId) {
 }
 
 export function useGetOnecomment(commentId) {
-  const [comment, setcomment] = useState(null); // Initial state should match the expected data type
+  const [comment, setcomment] = useState(null);
 
   useEffect(() => {
     if (!commentId) return;
