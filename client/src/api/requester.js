@@ -39,8 +39,6 @@ export async function requester(method, url, data) {
   const result = response.json();
 
   if (!response.ok) {
-    console.log(response);
-
     throw result;
   }
 

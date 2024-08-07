@@ -5,7 +5,6 @@ import { useGetAllBlogs } from "../../hooks/useBlogs";
 import { DeleteBlog } from "./delete-blog/DeleteBlog";
 import { useState } from "react";
 import EditBlog from "./edit-blog/EditBlog";
-import { NavLink } from "react-router-dom";
 
 export default function BlogList() {
   const [blogs, fetchBlogs] = useGetAllBlogs();

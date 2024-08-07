@@ -42,7 +42,7 @@ export default function CreateBlog({ show, onClose }) {
 
   return (
     <Modal show={show} onClose={onClose}>
-      <Modal.Header>Create a New Gossip</Modal.Header>
+      <Modal.Header>Create a new Blog</Modal.Header>
       <Modal.Body>
         <form onSubmit={submitHandler} className="space-y-6">
           <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">

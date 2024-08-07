@@ -88,7 +88,7 @@ export default function Header() {
             </li>
             <li>
               <NavLink
-                to="/services"
+                to="/latest-comments"
                 className={({ isActive }) =>
                   `block py-2 px-3 rounded md:bg-transparent md:p-0 ${
                     isActive
@@ -97,12 +97,12 @@ export default function Header() {
                   }`
                 }
               >
-                Services
+                Latest Comments
               </NavLink>
             </li>
             <li>
               <NavLink
-                to="/pricing"
+                to="/contact"
                 className={({ isActive }) =>
                   `block py-2 px-3 rounded md:bg-transparent md:p-0 ${
                     isActive
@@ -111,7 +111,7 @@ export default function Header() {
                   }`
                 }
               >
-                Pricing
+                Contacts
               </NavLink>
             </li>
             {isAuthenticated ? (

@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom";
 import NoPermissions from "../../../common/not-authorized/NoPermissions";
 import { useAuthContext } from "../../../contexts/AuthContext";
 
@@ -5,7 +6,6 @@ export default function BlogListItem({
   _ownerId: ownerId,
   _id,
   title,
-  dateTime,
   date,
   description,
   category,
@@ -18,16 +18,27 @@ export default function BlogListItem({
   return (
     <article className="flex max-w-xl flex-col items-start justify-between bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md dark:shadow-gray-700 cursor-pointer">
       <div className="flex items-center gap-x-4 text-xs">
-        <time dateTime={dateTime} className="text-gray-500 dark:text-gray-400">
+        <time dateTime={date} className="text-gray-500 dark:text-gray-400">
           {date}
         </time>
-        <a
-          href={category.name}
-          className="relative z-10 rounded-full bg-gray-50 dark:bg-gray-700 px-3 py-1.5 font-medium text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-600"
+        <NavLink
+          to={`/blogs/${_id}/details`}
+          className="relative z-10 rounded-full bg-gray-200 dark:bg-gray-500 px-3 py-1.5
+    font-medium text-gray-600 dark:text-gray-300 hover:bg-gray-200
+    dark:hover:bg-black-900"
         >
           {category.title}
-        </a>
+        </NavLink>
+        <NavLink
+          to={`/blogs/${_id}/details`}
+          className="relative z-10 rounded-full bg-gray-200 dark:bg-gray-500 px-3 py-1.5
+    font-medium text-gray-600 dark:text-gray-300 hover:bg-gray-200
+    dark:hover:bg-black-200"
+        >
+          OPEN
+        </NavLink>
       </div>
+
       <div className="group relative mt-3">
         <h3 className="text-lg font-semibold leading-6 text-gray-900 dark:text-gray-100 group-hover:text-gray-600 dark:group-hover:text-gray-300">
           {title}

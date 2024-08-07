@@ -20,6 +20,25 @@ export function useGetAllcomments(blogId) {
   return [comments, fetchcomments];
 }
 
+export function useListAllcomments() {
+  const [comments, setcomments] = useState([]);
+
+  const fetchcomments = async () => {
+    try {
+      const result = await commentsAPI.listAll();
+      setcomments(result);
+    } catch (error) {
+      console.error("Failed to fetch comments:", error);
+    }
+  };
+
+  useEffect(() => {
+    fetchcomments();
+  }, []);
+
+  return [comments, fetchcomments];
+}
+
 export function useGetOnecomment(commentId) {
   const [comment, setcomment] = useState(null);
 

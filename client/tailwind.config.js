@@ -20,6 +20,8 @@ export default {
         "cancel-dark": "#374151",
         "cancel-light-hover": "#9CA3AF",
         "cancel-dark-hover": "#4B5563",
+        "pills-light-hover": "#7DD6E5",
+        "pills-dark-hover": "#D24DAD",
       },
     },
     fontFamily: {
