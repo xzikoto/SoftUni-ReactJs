@@ -37,10 +37,10 @@ To get started with the project locally, follow these steps:
 
 ### Clone the Repository
 git clone [[https://github.com/yourusername/your-repository.git](https://github.com/xzikoto/SoftUni-ReactJs)](https://github.com/xzikoto/SoftUni-ReactJs.git)
-cd client 
-firebase serve
-go to localhost:5000/login
-email: admin@abv.bg
-password: admin
+- cd client 
+- firebase serve
+- go to localhost:5000/login
+- email: admin@abv.bg
+- password: admin
 
 Enjoy, if you have any questions, send a email form request from the Contact page :)
