@@ -10,6 +10,10 @@ export const getAll = (blogId) => {
   return requester.get(`${COMMENTS_ENDPOINT}?${params}&sortBy=datetime%20desc`);
 };
 
+export const listAll = () => {
+  return requester.get(`${COMMENTS_ENDPOINT}?sortBy=datetime%20desc`);
+};
+
 export const get = (id) => requester.get(`${COMMENTS_ENDPOINT}/${id}`);
 
 export const create = (commentData) =>
@@ -26,6 +30,7 @@ const commentsAPI = {
   create,
   del,
   put,
+  listAll,
 };
 
 export default commentsAPI;

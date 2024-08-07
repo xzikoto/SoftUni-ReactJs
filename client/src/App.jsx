@@ -15,6 +15,10 @@ import NotAuthenticated from "./common/not-authorized/NotAuthenticated";
 import PublicRoute from "./common/route/PublicRoute";
 import Authenticated from "./common/not-authorized/Authenticated";
 import Logout from "./components/logout/Logout";
+import Contact from "./components/contact/Contact";
+import LatestCommentsList from "./components/comments/latest-comments/LatestCommentsList";
+import LatestCommentsListItem from "./components/comments/latest-comments/latest-comments-list-item/LatestCommentsListItem";
+import DetailsLatestCommentListItem from "./components/comments/latest-comments/latest-comments-list-item/DetailsLatestCommentListItem";
 
 function App() {
   return (
@@ -22,7 +26,7 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
-
+        <Route path="/contact" element={<Contact />} />
         <Route path="/login" element={<Login />} />
         <Route path="/logout" element={<Logout />} />
         <Route path="/register" element={<Register />} />
@@ -31,6 +35,11 @@ function App() {
         <Route path="/authenticated" element={<Authenticated />} />
         <Route element={<PrivateRoute />}>
           <Route path="/blogs/:blogId/details" element={<DetailsBlog />} />
+          <Route path="/latest-comments" element={<LatestCommentsList />} />
+          <Route
+            path="/latest-comments/:commentId"
+            element={<DetailsLatestCommentListItem />}
+          />
         </Route>
         <Route element={<PublicRoute />}>
           <Route path="/login" element={<Login />} />

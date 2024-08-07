@@ -12,6 +12,7 @@
     "build:deploy": "npm run build && npm run deploy"
   },
   "dependencies": {
+    "@souhaildev/reactemojis": "^1.0.5",
     "axios": "^1.7.3",
     "flowbite-react": "^0.10.1",
     "react": "^18.3.1",

@@ -44,7 +44,7 @@ export default function Home() {
               to="/blogs"
               className="text-white inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center rounded-lg transition-transform duration-300 ease-in-out transform bg-gradient-to-r from-create-light-start to-create-light-end hover:scale-105 dark:from-create-dark-start dark:to-create-dark-end focus:outline-none focus:ring-4 focus:ring-purple-300 dark:focus:ring-blue-500"
             >
-              Create Gossip
+              Create Blog
               <svg
                 className="ml-2 -mr-1 w-5 h-5"
                 fill="currentColor"

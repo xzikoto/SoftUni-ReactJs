@@ -1,5 +1,6 @@
 import "./CommentsListItem.css";
 import { useAuthContext } from "../../../contexts/AuthContext";
+import Like from "../comment-like/Like";
 
 export default function CommentsListItem({
   _id,
@@ -11,6 +12,8 @@ export default function CommentsListItem({
   onDropdownClose,
   onEdit,
   onRemove,
+  onLike,
+  isUserLiked,
 }) {
   const { userId, isAuthenticated } = useAuthContext();
 
@@ -25,7 +28,11 @@ export default function CommentsListItem({
       onRemove(_id);
     }
   };
-
+  const handleLike = () => {
+    if (typeof onLike === "function") {
+      onLike(_id);
+    }
+  };
   return (
     <article className="p-6 text-base bg-white rounded-lg dark:bg-gray-900 relative">
       <footer className="flex justify-between items-center mb-2">
@@ -40,24 +47,30 @@ export default function CommentsListItem({
           </p>
         </div>
         <>
-          {ownerId === userId && isAuthenticated && (
-            <button
-              onClick={onDropdownToggle}
-              className="inline-flex items-center p-2 text-sm font-medium text-center text-gray-500 dark:text-gray-400 bg-white rounded-lg hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-50 dark:bg-gray-900 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
-              type="button"
-            >
-              <svg
-                className="w-4 h-4"
-                aria-hidden="true"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="currentColor"
-                viewBox="0 0 16 3"
+          <div className="flex items-center space-x-2">
+            {ownerId === userId && (
+              <Like onClick={handleLike} disabled={isUserLiked} />
+            )}
+
+            {ownerId === userId && isAuthenticated && (
+              <button
+                onClick={onDropdownToggle}
+                className="inline-flex items-center p-2 text-sm font-medium text-center text-gray-500 dark:text-gray-400 bg-white rounded-lg hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-50 dark:bg-gray-900 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+                type="button"
               >
-                <path d="M2 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3Zm6.041 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM14 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3Z" />
-              </svg>
-              <span className="sr-only">Comment settings</span>
-            </button>
-          )}
+                <svg
+                  className="w-4 h-4"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="currentColor"
+                  viewBox="0 0 16 3"
+                >
+                  <path d="M2 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3Zm6.041 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM14 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3Z" />
+                </svg>
+                <span className="sr-only">Comment settings</span>
+              </button>
+            )}
+          </div>
           {isDropdownOpen && (
             <div
               className="dropdown-menu absolute right-0 mt-2 w-48 bg-white rounded-lg shadow-lg dark:bg-gray-800"

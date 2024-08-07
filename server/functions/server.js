@@ -1569,6 +1569,17 @@
         text: "A very interesting post!",
         _ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
         datetime: "2024-08-06T10:00:00Z",
+        likes: [
+          {
+            userId: "847ec027-f659-4086-8032-5173e2f9c93a",
+            email: "george@abv.bg",
+          },
+          {
+            userId: "35c62d76-8152-4626-8712-eeb96381bea8",
+            email: "peter@abv.bg",
+          },
+        ],
+        likesCount: 0,
       },
       "0f090753-78be-4348-9c6f-a8bcdaf919a2": {
         _id: "0f090753-78be-4348-9c6f-a8bcdaf919a2",
@@ -1576,6 +1587,17 @@
         text: "Unit Testing is a useful testing technique in programming.",
         _ownerId: "847ec027-f659-4086-8032-5173e2f9c93a",
         datetime: "2024-08-06T10:05:00Z",
+        likes: [
+          {
+            userId: "847ec027-f659-4086-8032-5173e2f9c93a",
+            email: "george@abv.bg",
+          },
+          {
+            userId: "35c62d76-8152-4626-8712-eeb96381bea8",
+            email: "peter@abv.bg",
+          },
+        ],
+        likesCount: 0,
       },
       "2e5e9168-afb8-40c4-b176-bb126034d8a5": {
         _id: "2e5e9168-afb8-40c4-b176-bb126034d8a5",
@@ -1583,6 +1605,17 @@
         text: "Modularization and encapsulation are two very important concepts in software engineering.",
         _ownerId: "60f0cf0b-34b0-4abd-9769-8c42f830dffc",
         datetime: "2024-08-06T10:10:00Z",
+        likes: [
+          {
+            userId: "847ec027-f659-4086-8032-5173e2f9c93a",
+            email: "george@abv.bg",
+          },
+          {
+            userId: "35c62d76-8152-4626-8712-eeb96381bea8",
+            email: "peter@abv.bg",
+          },
+        ],
+        likesCount: 0,
       },
       "900b0eb1-cc89-4adf-a32d-c865c6de5d6b": {
         _id: "900b0eb1-cc89-4adf-a32d-c865c6de5d6b",
@@ -1590,6 +1623,17 @@
         text: "AJAX (Asynchronous JavaScript and XML) is a set of tools used to make calls to servers to fetch some data.",
         _ownerId: "60f0cf0b-34b0-4abd-9769-8c42f830dffc",
         datetime: "2024-08-06T10:15:00Z",
+        likes: [
+          {
+            userId: "847ec027-f659-4086-8032-5173e2f9c93a",
+            email: "george@abv.bg",
+          },
+          {
+            userId: "35c62d76-8152-4626-8712-eeb96381bea8",
+            email: "peter@abv.bg",
+          },
+        ],
+        likesCount: 0,
       },
       "34dbce86-e6eb-410b-83be-cea51d513e58": {
         _id: "34dbce86-e6eb-410b-83be-cea51d513e58",
@@ -1597,6 +1641,17 @@
         text: "Thank you! This post is very useful.",
         _ownerId: "60f0cf0b-34b0-4abd-9769-8c42f830dffc",
         datetime: "2024-08-06T10:20:00Z",
+        likes: [
+          {
+            userId: "847ec027-f659-4086-8032-5173e2f9c93a",
+            email: "george@abv.bg",
+          },
+          {
+            userId: "35c62d76-8152-4626-8712-eeb96381bea8",
+            email: "peter@abv.bg",
+          },
+        ],
+        likesCount: 0,
       },
       "6655d73c-23d6-4b98-b985-f63210f88a75": {
         _id: "6655d73c-23d6-4b98-b985-f63210f88a75",
@@ -1604,6 +1659,17 @@
         text: "Most of the concepts are explained clearly in the post. Thank you!",
         _ownerId: "60f0cf0b-34b0-4abd-9769-8c42f830dffc",
         datetime: "2024-08-06T10:25:00Z",
+        likes: [
+          {
+            userId: "847ec027-f659-4086-8032-5173e2f9c93a",
+            email: "george@abv.bg",
+          },
+          {
+            userId: "35c62d76-8152-4626-8712-eeb96381bea8",
+            email: "peter@abv.bg",
+          },
+        ],
+        likesCount: 0,
       },
     },
   };

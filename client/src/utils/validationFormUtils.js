@@ -7,7 +7,7 @@ export const validateBlog = (values) => {
   if (!values.date) {
     errors.date = "Date is required";
   }
-  if (values.description.length <= 30) {
+  if (values.description.length >= 35) {
     errors.description = "Description must be no more than 35 characters long";
   }
   if (!values.description) {
@@ -85,6 +85,26 @@ export const validateLogin = (values) => {
 
   if (!values.password) {
     errors.password = "Password is required";
+  }
+
+  return errors;
+};
+
+export const validateContact = (values) => {
+  const errors = {};
+
+  if (!values.email) {
+    errors.email = "Email is required";
+  } else if (!/\S+@\S+\.\S+/.test(values.email)) {
+    errors.email = "Email address is invalid";
+  }
+
+  if (!values.subject) {
+    errors.password = "Subject is required";
+  }
+
+  if (!values.message) {
+    errors.password = "Message is required";
   }
 
   return errors;
