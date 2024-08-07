@@ -1,8 +1,6 @@
 # Project README
 
-## Welcome to Our Web Application!
-
-This project is a robust platform designed for blogging and user interaction. Below is a comprehensive overview of its features and functionalities.
+## Welcome to Devs Blogs!
 
 ---
 
@@ -39,4 +37,4 @@ To get started with the project locally, follow these steps:
 
 ### Clone the Repository
 ```bash
-git clone https://github.com/yourusername/your-repository.git
+git clone [[https://github.com/yourusername/your-repository.git](https://github.com/xzikoto/SoftUni-ReactJs)](https://github.com/xzikoto/SoftUni-ReactJs.git)
