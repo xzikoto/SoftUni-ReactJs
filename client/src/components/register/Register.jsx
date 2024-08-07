@@ -4,12 +4,15 @@ import { useForm } from "../../hooks/useForm";
 import MainLogo from "../../common/logos/MainLogo";
 import AppName from "../../common/logos/AppName";
 import { validateRegistration } from "../../utils/validationFormUtils";
+import { useContext, useEffect } from "react";
+import { AuthContext } from "../../contexts/AuthContext";
 
 const initialValues = { email: "", password: "", confirmPassword: "" };
 
 export default function Register() {
   const register = useRegister();
   const navigate = useNavigate();
+  const { isAuthenticated } = useContext(AuthContext);
 
   const registerHandler = async ({ email, password, confirmPassword }) => {
     try {
@@ -25,6 +28,12 @@ export default function Register() {
     registerHandler,
     validateRegistration
   );
+
+  useEffect(() => {
+    if (isAuthenticated) {
+      navigate("/authenticated");
+    }
+  }, []);
 
   return (
     <section className="bg-gray-50 dark:bg-gray-900">
