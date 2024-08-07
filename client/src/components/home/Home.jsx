@@ -18,7 +18,7 @@ export default function Home() {
               New
             </span>{" "}
             <span className="text-sm font-medium">
-              Check out Gossips about the most famouse Devs
+              Check out Blogs of the most famous Devs
             </span>
             <svg
               className="ml-2 w-5 h-5"

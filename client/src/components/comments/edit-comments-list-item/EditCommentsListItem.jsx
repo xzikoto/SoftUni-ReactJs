@@ -8,7 +8,7 @@ import { useAuthContext } from "../../../contexts/AuthContext";
 
 export default function EditCommentsListItem({ show, onClose, onSubmit, id }) {
   const editComment = useEditComment();
-  const [readComment, setReadComment] = useState(null); // State to store the fetched comment
+  const [readComment, setReadComment] = useState(null);
   const { blogId } = useParams();
   const { email } = useAuthContext();
 
@@ -41,7 +41,7 @@ export default function EditCommentsListItem({ show, onClose, onSubmit, id }) {
       onSubmit(updatedComment);
       onClose();
     } catch (err) {
-      console.error(err.message); // TODO: Handle the error appropriately
+      console.error(err.message);
     }
   };
 
@@ -51,7 +51,6 @@ export default function EditCommentsListItem({ show, onClose, onSubmit, id }) {
     validateComment
   );
 
-  // Use effect to update form values when readComment changes
   useEffect(() => {
     if (readComment) {
       setValues({

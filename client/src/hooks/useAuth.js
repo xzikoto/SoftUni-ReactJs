@@ -15,6 +15,42 @@ export const useLogin = () => {
   return loginHandler;
 };
 
+export const useGoogleLoginCustomHook = () => {
+  const { changeAuthState } = useAuthContext();
+
+  const googleLogin = useGoogleLogin({
+    onSuccess: (codeResponse) => {
+      console.log(codeResponse);
+
+      const authData = {};
+      changeAuthState(authData);
+    },
+    onError: (error) => {
+      console.log("Login Failed:", error);
+    },
+  });
+
+  const loginHandler = async () => {
+    await googleLogin();
+  };
+
+  return loginHandler;
+};
+
+export const useGoogleLogin = () => {
+  const { changeAuthState } = useAuthContext();
+
+  const loginHandler = async (username, password) => {
+    const { password: _, ...authData } = await login(username, password);
+
+    changeAuthState(authData);
+
+    return authData;
+  };
+
+  return loginHandler;
+};
+
 export const useRegister = () => {
   const { changeAuthState } = useAuthContext();
 

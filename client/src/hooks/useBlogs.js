@@ -21,7 +21,7 @@ export function useGetAllBlogs() {
 }
 
 export function useGetOneBlog(blogId) {
-  const [blog, setBlog] = useState(null); // Initial state should match the expected data type
+  const [blog, setBlog] = useState(null); 
 
   useEffect(() => {
     if (!blogId) return;

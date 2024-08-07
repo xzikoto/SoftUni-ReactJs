@@ -1,5 +1,4 @@
-import React from "react";
-import "./CommentsListItem.css"; // Import the CSS file
+import "./CommentsListItem.css";
 import { useAuthContext } from "../../../contexts/AuthContext";
 
 export default function CommentsListItem({
