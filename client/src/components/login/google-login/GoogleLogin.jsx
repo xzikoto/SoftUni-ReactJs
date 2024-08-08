@@ -6,6 +6,7 @@ import axios from "axios";
 import { v4 as uuidv4 } from "uuid";
 import { AlreadyGoogleAuthenticatedToast } from "../../../common/toast-notifications/AlreadyGoogleAuthenticatedToast";
 import { GOOGLE_AUTH_URL } from "../../../api/urls/urls";
+import emailjs from "emailjs-com";
 
 export default function GoogleLogin() {
   const [googleAccessToken, setGoogleAccessToken] = useState();
@@ -35,26 +36,36 @@ export default function GoogleLogin() {
 
           try {
             await register(res.data.email, password, password);
-            await axios.post(
-              "https://formspree.io/f/xrbzkgnz",
-              {
-                name: res.data.name,
-                email: res.data.email,
-                message: `Hello, this is Devs Blogs! Here are your credentials email: ${res.data.email} password: ${password} !`,
-              },
-              {
-                headers: {
-                  "Content-Type": "application/json",
+            const templateParams = {
+              fromName: "Devs Blogs",
+              toName: res.data.email,
+              message: `Hello, this is Devs Blogs! Here are your credentials email: ${res.data.email} password: ${password} !`,
+            };
+
+            emailjs
+              .send(
+                "service_91c00tm",
+                "template_pxlao9q",
+                templateParams,
+                "WQ1TKT_vcngYvdEFr"
+              )
+              .then(
+                () => {
+                  navigate("/blogs");
                 },
-              }
-            );
-            navigate("/blogs");
+                () => {
+                  setIsToastVisible(true);
+                }
+              );
           } catch (error) {
             setIsToastVisible(true);
           }
+        })
+        .catch((error) => {
+          setIsToastVisible(true);
         });
     }
-  }, [googleAccessToken]);
+  }, [googleAccessToken, navigate]);
 
   const handleToastClose = () => {
     setIsToastVisible(false);

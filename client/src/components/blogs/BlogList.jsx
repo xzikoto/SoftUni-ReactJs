@@ -14,7 +14,7 @@ export default function BlogList() {
   const [openEditModal, setOpenEditModal] = useState(false);
   const [deleteBlogId, setDeleteBlogId] = useState("");
   const [editBlogId, setEditBlogId] = useState("");
-  const [isAuthenticated] = useAuthContext();
+  const { isAuthenticated } = useAuthContext();
 
   const handleDeleteBlog = async (blogId) => {
     try {
