@@ -38,12 +38,25 @@ To get started with the project locally, follow these steps:
 
 ### Clone the Repository
 git clone [[https://github.com/yourusername/your-repository.git](https://github.com/xzikoto/SoftUni-ReactJs)](https://github.com/xzikoto/SoftUni-ReactJs.git)
+
+### Run Client App locally with firebase 
+- (Client will send api request to the deployed Server app on Firebase)
 - cd client 
 - firebase serve
 - go to localhost:5000/login
 - email: admin@abv.bg
 - password: admin
 
+### Run both the Client App and Server
+- cd client
+- npm install
+- npm run dev
+- cd .. (go back one directory)
+- cd server
+- node server.js
+- go to localhost:5173/login
+- email: admin@abv.bg
+- password: admin
 
 ## Architecture
 - Client App (client folder)
