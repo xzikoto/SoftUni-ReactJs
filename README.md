@@ -42,6 +42,7 @@ git clone [[https://github.com/yourusername/your-repository.git](https://github.
 ### Run Client App locally with firebase 
 - (Client will send api request to the deployed Server app on Firebase)
 - cd client 
+- npm run build (wait a bit)
 - firebase serve
 - go to localhost:5000/login
 - email: admin@abv.bg
