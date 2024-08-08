@@ -28,6 +28,7 @@ Our web application offers a seamless blogging experience with a variety of feat
 - **Toast Notifications**: Provides instant feedback to users with toast notifications for various actions and statuses.
 - **Email Integration**: Configured for sending sign-in notifications and handling contact form submissions.
 - **Contact Form**: A contact form is available for users to send messages directly to the developers.
+- **Google Gemini AI Comment Generator**: When writing a comment to a Blog you have the functionality to generate a comment by the Google Gemini AI.
 
 ---
 You can directly check the application from here: https://reactjs-project-softuni.web.app/
