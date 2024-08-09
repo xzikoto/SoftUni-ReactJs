@@ -1,8 +1,9 @@
 import { useState } from "react";
 import { useForm } from "../../hooks/useForm";
-import axios from "axios";
 import { validateContact } from "../../utils/validationFormUtils";
 import { ContactMessageSuccessToast } from "../../common/toast-notifications/ContactMessageSuccessToast";
+
+import emailjs from "emailjs-com";
 
 const initialValues = {
   email: "",
@@ -15,24 +16,26 @@ export default function Contact() {
 
   const createHandler = async (values) => {
     try {
-      await axios.post(
-        "https://formspree.io/f/xrbzkgnz",
-        {
-          name: values.subject,
-          email: values.email,
-          message: values.message,
-        },
-        {
-          headers: {
-            "Content-Type": "application/json",
-          },
-        }
-      );
-      setValues(initialValues);
-      setShowSuccessToast(true);
-    } catch (err) {
-      console.log(err.message);
-    }
+      const templateParams = {
+        fromName: "Devs Blogs",
+        toName: values.email,
+        message: values.message,
+      };
+
+      emailjs
+        .send(
+          "service_91c00tm",
+          "template_pxlao9q",
+          templateParams,
+          "WQ1TKT_vcngYvdEFr"
+        )
+        .then(() => {
+          setShowSuccessToast(true);
+        });
+    } catch (error) {}
+
+    setValues(initialValues);
+    setShowSuccessToast(true);
   };
 
   const { values, changeHandler, submitHandler, setValues, errors } = useForm(

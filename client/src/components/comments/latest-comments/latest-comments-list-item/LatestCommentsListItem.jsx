@@ -5,6 +5,7 @@ export default function LatestCommentsListItem({
   text,
   datetime,
   _ownerId,
+  likes: likesCount,
 }) {
   return (
     <article className="p-6 bg-white dark:bg-gray-800 rounded-lg shadow-lg dark:shadow-2xl transition-shadow duration-300 relative">
@@ -18,6 +19,9 @@ export default function LatestCommentsListItem({
               {datetime}
             </time>
           </p>
+          <span className="bg-indigo-100 text-indigo-800 text-sm font-medium me-2 px-2.5 py-0.5 rounded dark:bg-indigo-900 dark:text-indigo-300">
+            {likesCount}
+          </span>
         </div>
       </footer>
       <p className="text-gray-800 dark:text-gray-200 leading-relaxed mb-6">
@@ -29,7 +33,7 @@ export default function LatestCommentsListItem({
         dark:hover:bg-black-900"
         to={`/latest-comments/${_id}`}
       >
-        Open
+        Open Comment
       </NavLink>
     </article>
   );

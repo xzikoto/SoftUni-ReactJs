@@ -21,7 +21,7 @@ export function useGetAllBlogs() {
 }
 
 export function useGetOneBlog(blogId) {
-  const [blog, setBlog] = useState(null); 
+  const [blog, setBlog] = useState(null);
 
   useEffect(() => {
     if (!blogId) return;
