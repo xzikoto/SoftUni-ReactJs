@@ -38,7 +38,7 @@ You can directly check the application from here: https://reactjs-project-softun
 To get started with the project locally, follow these steps:
 
 ### Clone the Repository
-git clone [[https://github.com/yourusername/your-repository.git](https://github.com/xzikoto/SoftUni-ReactJs)](https://github.com/xzikoto/SoftUni-ReactJs.git)
+git clone [https://github.com/xzikoto/SoftUni-ReactJs.git](Repo URL)
 
 ### Run Client App locally with firebase 
 - (Client will send api request to the deployed Server app on Firebase)
