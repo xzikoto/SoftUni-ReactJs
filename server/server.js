@@ -1424,20 +1424,23 @@
   var identity = "email";
   var protectedData = {
     users: {
-      "83092c7b-e07f-4079-b362-88dd677f2159": {
-        email: "raya@email.com",
+      "35c62d76-8152-4626-8712-eeb96381bea8": {
+        email: "peter@abv.bg",
+        username: "Peter",
         hashedPassword:
-          "25d7c799cb5095f8df7df45abe04ec6d05edc69cd5c75028104313d6108f3e91",
+          "83313014ed3e2391aa1332615d2f053cf5c1bfe05ca1cbcb5582443822df6eb1",
       },
-      "948f1c58-6d32-436a-96be-6592744e2fc4": {
-        email: "anton@email.com",
+      "847ec027-f659-4086-8032-5173e2f9c93a": {
+        email: "george@abv.bg",
+        username: "George",
         hashedPassword:
-          "7061f922207fbacbf146d4d74cbb4b991c10617aab0110eff2ee59fe8a480e1c",
+          "fac7060c3e17e6f151f247eacb2cd5ae80b8c36aedb8764e18a41bbdc16aa302",
       },
-      "a27e324d-46fb-4633-afcd-c6ab35f08579": {
-        email: "slavi@email.com",
+      "60f0cf0b-34b0-4abd-9769-8c42f830dffc": {
+        email: "admin@abv.bg",
+        username: "Admin",
         hashedPassword:
-          "3421084c2933758869ea73bebf0004d7f1b2ecea00b565a7676e2a9f210d7b12",
+          "fac7060c3e17e6f151f247eacb2cd5ae80b8c36aedb8764e18a41bbdc16aa302",
       },
     },
     sessions: {},
@@ -1566,17 +1569,6 @@
         text: "A very interesting post!",
         _ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
         datetime: "2024-08-06T10:00:00Z",
-        likes: [
-          {
-            userId: "847ec027-f659-4086-8032-5173e2f9c93a",
-            email: "george@abv.bg",
-          },
-          {
-            userId: "35c62d76-8152-4626-8712-eeb96381bea8",
-            email: "peter@abv.bg",
-          },
-        ],
-        likesCount: 0,
       },
       "0f090753-78be-4348-9c6f-a8bcdaf919a2": {
         _id: "0f090753-78be-4348-9c6f-a8bcdaf919a2",
@@ -1584,17 +1576,6 @@
         text: "Unit Testing is a useful testing technique in programming.",
         _ownerId: "847ec027-f659-4086-8032-5173e2f9c93a",
         datetime: "2024-08-06T10:05:00Z",
-        likes: [
-          {
-            userId: "847ec027-f659-4086-8032-5173e2f9c93a",
-            email: "george@abv.bg",
-          },
-          {
-            userId: "35c62d76-8152-4626-8712-eeb96381bea8",
-            email: "peter@abv.bg",
-          },
-        ],
-        likesCount: 0,
       },
       "2e5e9168-afb8-40c4-b176-bb126034d8a5": {
         _id: "2e5e9168-afb8-40c4-b176-bb126034d8a5",
@@ -1602,17 +1583,6 @@
         text: "Modularization and encapsulation are two very important concepts in software engineering.",
         _ownerId: "60f0cf0b-34b0-4abd-9769-8c42f830dffc",
         datetime: "2024-08-06T10:10:00Z",
-        likes: [
-          {
-            userId: "847ec027-f659-4086-8032-5173e2f9c93a",
-            email: "george@abv.bg",
-          },
-          {
-            userId: "35c62d76-8152-4626-8712-eeb96381bea8",
-            email: "peter@abv.bg",
-          },
-        ],
-        likesCount: 0,
       },
       "900b0eb1-cc89-4adf-a32d-c865c6de5d6b": {
         _id: "900b0eb1-cc89-4adf-a32d-c865c6de5d6b",
@@ -1620,17 +1590,6 @@
         text: "AJAX (Asynchronous JavaScript and XML) is a set of tools used to make calls to servers to fetch some data.",
         _ownerId: "60f0cf0b-34b0-4abd-9769-8c42f830dffc",
         datetime: "2024-08-06T10:15:00Z",
-        likes: [
-          {
-            userId: "847ec027-f659-4086-8032-5173e2f9c93a",
-            email: "george@abv.bg",
-          },
-          {
-            userId: "35c62d76-8152-4626-8712-eeb96381bea8",
-            email: "peter@abv.bg",
-          },
-        ],
-        likesCount: 0,
       },
       "34dbce86-e6eb-410b-83be-cea51d513e58": {
         _id: "34dbce86-e6eb-410b-83be-cea51d513e58",
@@ -1638,17 +1597,6 @@
         text: "Thank you! This post is very useful.",
         _ownerId: "60f0cf0b-34b0-4abd-9769-8c42f830dffc",
         datetime: "2024-08-06T10:20:00Z",
-        likes: [
-          {
-            userId: "847ec027-f659-4086-8032-5173e2f9c93a",
-            email: "george@abv.bg",
-          },
-          {
-            userId: "35c62d76-8152-4626-8712-eeb96381bea8",
-            email: "peter@abv.bg",
-          },
-        ],
-        likesCount: 0,
       },
       "6655d73c-23d6-4b98-b985-f63210f88a75": {
         _id: "6655d73c-23d6-4b98-b985-f63210f88a75",
@@ -1656,19 +1604,9 @@
         text: "Most of the concepts are explained clearly in the post. Thank you!",
         _ownerId: "60f0cf0b-34b0-4abd-9769-8c42f830dffc",
         datetime: "2024-08-06T10:25:00Z",
-        likes: [
-          {
-            userId: "847ec027-f659-4086-8032-5173e2f9c93a",
-            email: "george@abv.bg",
-          },
-          {
-            userId: "35c62d76-8152-4626-8712-eeb96381bea8",
-            email: "peter@abv.bg",
-          },
-        ],
-        likesCount: 0,
       },
     },
+    likes: {},
   };
   var rules$1 = {
     users: {

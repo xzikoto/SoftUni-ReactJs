@@ -1,13 +1,14 @@
 import { useEffect, useState } from "react";
 import commentsAPI from "../api/comments-api";
+import likesAPI from "../api/likes-api";
 
 export function useGetAllcomments(blogId) {
-  const [comments, setcomments] = useState([]);
+  const [comments, setComments] = useState([]);
 
   const fetchcomments = async () => {
     try {
       const result = await commentsAPI.getAll(blogId);
-      setcomments(result);
+      setComments(result);
     } catch (error) {
       console.error("Failed to fetch comments:", error);
     }
@@ -37,6 +38,36 @@ export function useListAllcomments() {
   }, []);
 
   return [comments, fetchcomments];
+}
+
+export function useGetMostLikedComments() {
+  const [comments, setComments] = useState([]);
+
+  const fetchComments = async () => {
+    try {
+      const result = await commentsAPI.listAll();
+
+      const commentsWithLikes = await Promise.all(
+        result.map(async (comment) => {
+          const likes = await likesAPI.getAll(comment._id);
+          return { ...comment, likes: likes.length };
+        })
+      );
+
+      const sortedComments = commentsWithLikes.sort(
+        (a, b) => b.likes - a.likes
+      );
+      setComments(sortedComments);
+    } catch (error) {
+      console.error("Failed to fetch comments:", error);
+    }
+  };
+
+  useEffect(() => {
+    fetchComments();
+  }, []);
+
+  return [comments, fetchComments];
 }
 
 export function useGetOnecomment(commentId) {

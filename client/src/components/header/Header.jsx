@@ -97,7 +97,7 @@ export default function Header() {
                   }`
                 }
               >
-                Latest Comments
+                Viral Comments
               </NavLink>
             </li>
             <li>
@@ -165,7 +165,7 @@ export default function Header() {
             <li className="pt-0.5">
               <button
                 onClick={toggleTheme}
-                className="flex items-center text-gray-900 dark:text-gray-300 focus:outline-none"
+                className="block py-2 px-3 rounded md:bg-transparent md:p-0 items-center text-gray-900 dark:text-gray-300 focus:outline-none"
               >
                 <input
                   type="checkbox"

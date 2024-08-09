@@ -1,9 +1,16 @@
 import "./CommentsListItem.css";
 import { useAuthContext } from "../../../contexts/AuthContext";
 import Like from "../comment-like/Like";
+import { useState, useEffect } from "react";
+import {
+  useCreateLike,
+  useDeleteLike,
+  useGetAllLikes,
+} from "../../../hooks/useLikes";
 
 export default function CommentsListItem({
   _id,
+  postId,
   text,
   datetime,
   author: { username, email, _id: ownerId },
@@ -12,10 +19,21 @@ export default function CommentsListItem({
   onDropdownClose,
   onEdit,
   onRemove,
-  onLike,
-  isUserLiked,
 }) {
   const { userId, isAuthenticated } = useAuthContext();
+
+  const [likes, fetchLikes] = useGetAllLikes(_id);
+  const [isUserLiked, setIsUserLiked] = useState(false);
+
+  const createLike = useCreateLike();
+  const deleteLike = useDeleteLike();
+
+  useEffect(() => {
+    if (likes) {
+      const isLiked = likes.some((like) => like._ownerId === userId);
+      setIsUserLiked(isLiked);
+    }
+  }, [likes, userId]);
 
   const handleEdit = () => {
     if (onEdit) {
@@ -28,11 +46,34 @@ export default function CommentsListItem({
       onRemove(_id);
     }
   };
-  const handleLike = () => {
-    if (typeof onLike === "function") {
-      onLike(_id);
+
+  const handleLike = async () => {
+    const like = likes.find((like) => like._ownerId === userId);
+    if (like) {
+      try {
+        await deleteLike(like._id);
+        setIsUserLiked(false);
+
+        fetchLikes();
+      } catch (error) {
+        console.error("Error deleting like:", error);
+      }
+    } else {
+      try {
+        await createLike({
+          _ownerId: ownerId,
+          commentId: _id,
+          postId: postId,
+        });
+
+        setIsUserLiked(true);
+        fetchLikes();
+      } catch (error) {
+        console.error("Error creating like:", error);
+      }
     }
   };
+
   return (
     <article className="p-6 text-base bg-white rounded-lg dark:bg-gray-900 relative">
       <footer className="flex justify-between items-center mb-2">
@@ -41,16 +82,27 @@ export default function CommentsListItem({
             {username} {email}
           </p>
           <p className="text-sm text-gray-600 dark:text-gray-400">
-            <time dateTime="2022-02-08" title="February 8th, 2022">
+            <time dateTime={datetime} title={datetime}>
               {datetime}
             </time>
           </p>
         </div>
         <>
           <div className="flex items-center space-x-2">
-            {ownerId === userId && (
-              <Like onClick={handleLike} disabled={isUserLiked} />
+            {!isUserLiked ? (
+              <Like onClick={handleLike} />
+            ) : (
+              <span
+                onClick={handleLike}
+                className="bg-indigo-100 text-indigo-800 text-sm font-medium me-2 px-2.5 py-0.5 rounded dark:bg-indigo-900 dark:text-indigo-300"
+              >
+                Liked!
+              </span>
             )}
+
+            <span className="bg-indigo-100 text-indigo-800 text-sm font-medium me-2 px-2.5 py-0.5 rounded dark:bg-indigo-900 dark:text-indigo-300">
+              {likes.length}
+            </span>
 
             {ownerId === userId && isAuthenticated && (
               <button
@@ -71,7 +123,7 @@ export default function CommentsListItem({
               </button>
             )}
           </div>
-          {isDropdownOpen && (
+          {isDropdownOpen && userId == ownerId && (
             <div
               className="dropdown-menu absolute right-0 mt-2 w-48 bg-white rounded-lg shadow-lg dark:bg-gray-800"
               onClick={onDropdownClose}

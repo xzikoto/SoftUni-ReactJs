@@ -1,21 +1,12 @@
 import ReactEmojis from "@souhaildev/reactemojis";
 
-export default function Like({ onClick, disabled }) {
-  const emojiStyle = {
-    height: 35,
-    width: 35,
-    cursor: disabled ? "not-allowed" : "pointer",
-    opacity: disabled ? 0.5 : 1,
-    color: disabled ? "#d3d3d3" : "inherit",
-    pointerEvents: disabled ? "none" : "auto",
-  };
+export default function Like({ onClick }) {
   return (
     <>
       <ReactEmojis
-        onClick={!disabled ? onClick : null}
+        onClick={onClick}
         emoji="👍"
-        emojiStyle="1"
-        style={emojiStyle}
+        style={{ width: 50, height: 50 }}
       />
     </>
   );
